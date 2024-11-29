@@ -18,6 +18,8 @@ body {
     flex:1; /* Pushes footer to the bottom when there is not enough content*/
   }
 
+
+
   footer {
     background-color: #333;
     color: white;
