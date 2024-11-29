@@ -1,0 +1,41 @@
+html,body{
+    height: 100%; /* Ensure the body fills the viewport */
+    margin: 0; /* Remove default margin */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    padding: 0;
+  }
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  main{
+    flex:1; /* Pushes footer to the bottom when there is not enough content*/
+  }
+
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    width: 100%;
+  }
+
+  #hero h2 {
+    font-size: 3rem;
+  }
+
+
+  
+  @media (max-width: 768px) {
+    #hero h2 {
+      font-size: 2rem;
+    }
+  }
+  
