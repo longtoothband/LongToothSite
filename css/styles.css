@@ -16,8 +16,13 @@ body {
   }
   main{
     flex:1; /* Pushes footer to the bottom when there is not enough content*/
+    background-color: #7e7575;
+
   }
 
+  #musicSection, #aboutSection{
+    background-color: rgb(139, 63, 35) !important;
+  }
 
 
   footer {
