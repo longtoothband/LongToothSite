@@ -20,15 +20,17 @@ body {
 
   }
 
+  /* Styling for card images*/
   .card-img-top{
     width: 200px;
     height: 200px;
     border-radius: 50%;
   }
 
-  
+
   #musicSection, #aboutSection{
     background-color: rgb(139, 63, 35) !important;
+    text-align: center;
   }
 
 
