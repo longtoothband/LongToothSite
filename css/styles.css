@@ -9,6 +9,7 @@ body {
     font-family: Arial, sans-serif;
     padding: 0;
   }
+
   header {
     position: sticky;
     top: 0;
@@ -29,8 +30,9 @@ body {
 
 
   #musicSection, #aboutSection{
-    background-color: rgb(139, 63, 35) !important;
+    background-color: rgb(67, 67, 76) !important;
     text-align: center;
+    margin-top: 20px;
   }
 
 
