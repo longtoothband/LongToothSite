@@ -3,14 +3,34 @@ html,body{
     margin: 0; /* Remove default margin */
 }
 
-img{
-  max-width: 100%;
-  height: auto;
-}
-#hero img {
+/*#hero img{
+  width: 500px;
+  max-height: 400px;
+  object-fit: cover;
+  
+
+} */
+/*#hero img {
   width: 100%;
   max-height: 400px; /* Adjust as necessary */
+ /* object-fit: cover;
+}*/
+
+.carousel img {
+  
+  max-height: 500px; /* Adjust the height as needed */
   object-fit: cover;
+}
+
+.carousel-caption h5 {
+  font-size: 2rem;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.carousel-caption p {
+  font-size: 1rem;
+  color: #ddd;
 }
 
 body {
@@ -25,6 +45,7 @@ body {
     top: 0;
     z-index: 1000;
   }
+
   main{
     flex:1; /* Pushes footer to the bottom when there is not enough content*/
     background-color: #100f0f;
@@ -74,6 +95,8 @@ body {
     #hero h2 {
       font-size: 2rem;
     }
+
+    
   }
 
   @media (max-width: 576px) {
