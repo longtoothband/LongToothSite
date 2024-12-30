@@ -3,6 +3,16 @@ html,body{
     margin: 0; /* Remove default margin */
 }
 
+img{
+  max-width: 100%;
+  height: auto;
+}
+#hero img {
+  width: 100%;
+  max-height: 400px; /* Adjust as necessary */
+  object-fit: cover;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -23,11 +33,18 @@ body {
 
   /* Styling for card images*/
   .card-img-top{
-    width: 200px;
-    height: 200px;
+    max-width: 100%;
+    height: auto;
     border-radius: 50%;
   }
 
+  .card-text{
+    font-size: 0.9rem; /* Adjust size for smaller screens */
+    text-align: center;
+    word-wrap: break-word; /* Ensures text wraps properly */
+}
+
+  
 
   #musicSection, #aboutSection{
     background-color: rgb(67, 67, 76) !important;
@@ -37,6 +54,8 @@ body {
 
 
   footer {
+    position: sticky;
+    bottom: 0;
     background-color: #333;
     color: white;
     text-align: center;
@@ -56,4 +75,18 @@ body {
       font-size: 2rem;
     }
   }
+
+  @media (max-width: 576px) {
+    #navbarContainter img {
+        max-width: 80px; /* Resize logo */
+    }
+
+    #hero img {
+        max-height: 300px; /* Reduce hero image height */
+    }
+
+    .card-title, .card-text {
+        font-size: 0.8rem; /* Reduce text size in cards */
+    }
+}
   
