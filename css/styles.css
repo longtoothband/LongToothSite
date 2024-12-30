@@ -47,7 +47,7 @@ body {
   /* Styling for card images*/
   .card-img-top{
     max-width: 100%;
-    height: auto;
+    max-height: 65%;
     border-radius: 50%;
   }
 
@@ -88,7 +88,13 @@ body {
       font-size: 2rem;
     }
 
-    
+    /* Styling for card images*/
+  .card-img-top{
+    max-width: 100%;
+    max-height: auto;
+    border-radius: 50%;
+  }
+
   }
 
   @media (max-width: 576px) {
@@ -98,6 +104,12 @@ body {
 
     #hero img {
         max-height: 300px; /* Reduce hero image height */
+    }
+
+    .card-img-top{
+      max-width: 70%;
+      max-height: auto;
+      border-radius: 50%;
     }
 
     .card-title, .card-text {
