@@ -16,22 +16,14 @@ html,body{
  /* object-fit: cover;
 }*/
 
-.carousel img {
-  
-  max-height: 500px; /* Adjust the height as needed */
+.carousel-inner img {
+  height: auto; /* Adjust the height as needed */
   object-fit: cover;
+ 
+  
 }
 
-.carousel-caption h5 {
-  font-size: 2rem;
-  color: #fff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-}
 
-.carousel-caption p {
-  font-size: 1rem;
-  color: #ddd;
-}
 
 body {
     display: flex;
