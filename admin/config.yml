@@ -1,7 +1,8 @@
 backend:
   name: git
   repo: longtoothban/LongToothSite # Replace with your GitHub repository
-  branch: develop # Default branch name for your repo
+  branch: develop # Default branch name for your repo 
+  token: "${LONGTOOTH_GITHUB_TOKEN}"
 
 media_folder: "assets/images" # Folder for uploaded images
 public_folder: "/assets/images"
