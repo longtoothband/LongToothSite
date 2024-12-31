@@ -139,17 +139,17 @@ body {
         max-height: 300px; /* Reduce hero image height */
     }
 
-    .card-img-top{
+  /*  .card-img-top{
       max-width: 70%;
       max-height: auto;
       border-radius: 50%;
-    }
+    }*/
 
     .bandMember{
       border: 10px solid transparent;
       margin-bottom: 25px;
       width: 70%;
-      max-height: 70%;
+      max-height: auto;
       border-radius: 50%;
       object-fit: cover;
   }
