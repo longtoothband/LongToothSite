@@ -5,7 +5,7 @@
 #public_folder: "/assets/images"
 
 collections:
-  - name: "gigs"
+    name: "gigs"
     label: "Gigs"
     folder: "content/gigs"
     create: true
