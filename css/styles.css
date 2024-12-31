@@ -3,6 +3,16 @@ html,body{
     margin: 0; /* Remove default margin */
 }
 
+.nav{
+  font-size: large;
+  margin-left: 40%;
+}
+
+a:hover {
+  text-decoration: underline;
+  border-bottom: 1px solid blue;
+}
+
 /*#hero img{
   width: 500px;
   max-height: 400px;
@@ -15,6 +25,10 @@ html,body{
   max-height: 400px; /* Adjust as necessary */
  /* object-fit: cover;
 }*/
+.logoHeader{
+  height: auto;
+  object-fit: cover;
+}
 
 .carousel-inner img {
   height: auto; /* Adjust the height as needed */
@@ -22,8 +36,6 @@ html,body{
  
   
 }
-
-
 
 body {
     display: flex;
@@ -57,13 +69,26 @@ body {
     word-wrap: break-word; /* Ensures text wraps properly */
 }
 
-  
-
   #musicSection, #aboutSection{
     background-color: rgb(67, 67, 76) !important;
     text-align: center;
     margin-top: 20px;
   }
+
+  .embed-responsive-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+  .embed-responsive-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 
 
   footer {
@@ -81,8 +106,6 @@ body {
     font-size: 3rem;
   }
 
-
-  
   @media (max-width: 768px) {
     #hero h2 {
       font-size: 2rem;
