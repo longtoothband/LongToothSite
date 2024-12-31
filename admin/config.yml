@@ -1,11 +1,13 @@
+backend:
+  name: git
   repo: longtoothban/LongToothSite # Replace with your GitHub repository
   branch: develop # Default branch name for your repo
 
-#media_folder: "assets/images" # Folder for uploaded images
-#public_folder: "/assets/images"
+media_folder: "assets/images" # Folder for uploaded images
+public_folder: "/assets/images"
 
 collections:
-    name: "gigs"
+  - name: "gigs"
     label: "Gigs"
     folder: "content/gigs"
     create: true
