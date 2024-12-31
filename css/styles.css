@@ -119,11 +119,13 @@ body {
 
   #hero h2 {
     font-size: 3rem;
+   
   }
 
   @media (max-width: 768px) {
     #hero h2 {
       font-size: 2rem;
+      
     }
 
     /* Styling for card images*/
