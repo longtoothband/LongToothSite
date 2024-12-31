@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: longtoothban/LongToothSite # Replace with your GitHub repository
+  repo: longtoothband/LongToothSite # Replace with your GitHub repository
   branch: develop # Default branch name for your repo 
   token: "${LONGTOOTH_GITHUB_TOKEN}"
 
