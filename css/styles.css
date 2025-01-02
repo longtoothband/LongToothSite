@@ -8,6 +8,21 @@ html,body{
   margin-left: 40%;
 }
 
+.navbar{
+  color: white;
+  margin-bottom: 0;
+  opacity: 0.8;
+}
+
+.navbar-toggler{
+border:1px solid gray;
+background-color:black;
+}
+
+.navbar-toggler-icon{
+  color:white;
+}
+
 a:hover {
   text-decoration: underline;
   border-bottom: 1px solid blue;
@@ -25,6 +40,8 @@ a:hover {
   max-height: 400px; /* Adjust as necessary */
  /* object-fit: cover;
 }*/
+
+
 .logoHeader{
   height: auto;
   object-fit: cover;
@@ -33,8 +50,8 @@ a:hover {
 .carousel-inner img {
   height: auto; /* Adjust the height as needed */
   object-fit: cover;
- 
   
+
 }
 
 body {
@@ -45,7 +62,7 @@ body {
   }
 
   header {
-    position: sticky;
+    /*position: sticky;*/
     top: 0;
     z-index: 1000;
   }
