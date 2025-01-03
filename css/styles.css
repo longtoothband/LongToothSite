@@ -51,6 +51,7 @@ a:hover {
   height: auto; /* Adjust the height as needed */
   object-fit: cover;
   
+
 }
 
 body {
@@ -63,14 +64,12 @@ body {
   header {
     /*position: sticky;*/
     top: 0;
-    z-index: 100;
-
+    z-index: 1000;
   }
 
   .logoHeader{
-    margin-top:25px
+    margin-top:40px;
   }
-
   main{
     flex:1; /* Pushes footer to the bottom when there is not enough content*/
     background-color: #100f0f;
