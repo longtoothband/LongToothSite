@@ -130,6 +130,8 @@ body {
     margin-top: 20px;
   }
 
+.full-bio{display: none;}
+
   .embed-responsive-item {
     position: absolute;
     top: 0;
