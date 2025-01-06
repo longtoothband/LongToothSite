@@ -11,6 +11,8 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
 
         <title>LongTooth</title>
+
+        <!--Stylesheet-->
         <link rel="stylesheet" href="css/styles.css">
         
     </head>
@@ -74,9 +76,6 @@
                         <span class="visually-hidden">Next</span>
                     </button>
                 </div>
-              <!--  <div class="col-md-4">
-                <h2>BOOK NOW</h2>
-                </div> -->
             </section>
 
         <section id="gigs" class="gig-section container d-flex align-items-center justify-content-center">
@@ -105,6 +104,7 @@
         </section>
         <!--End of Gigs Section-->
          
+        <!--Music Section-->
             <section class="containter py-4 " id="musicSection">
                 <!--Music Player-->
             <iframe width="70%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1974497775&color=%23003aff&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/longtooth-898384277" title="Longtooth" target="_blank" style="color: #cccccc; text-decoration: none;">Longtooth</a> · <a href="https://soundcloud.com/longtooth-898384277/my-addiction-24" 
@@ -113,37 +113,64 @@
             <iframe width="70%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1997940103&color=%23003aff&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/longtooth-898384277" title="Longtooth" target="_blank" style="color: #cccccc; text-decoration: none;">Longtooth</a> · <a href="https://soundcloud.com/longtooth-898384277/bleed-fo-you-24"
                 title="Bleed fo you 24" target="_blank" style="color: #cccccc; text-decoration: none;">Bleed fo you 24</a></div>
                 <!--End of music player block-->
-
             </section>
-            
+            <!--/Music Section-->
 
             <!--About Section-->
             <section class="container py-3" id="aboutSection"> 
                 <p>Located in Rochester NY, Long Tooth is a Metal band formed in 1997 by lead singer Jack Burnett and bass player Paul Van San.</p>
                 <h2>The Band</h2>
-            
                 <div class="container d-flex justify-content-center align-items-center" id="bandMemberContainer">
                     <div class="row"> 
-                        <div class="bandMember-item col-4 col-sm-4">
+
+                        <!--Band Member 1-->
+                        <div class="bandMemberContainer col-sm-4">
+                            <p>Jack</p>
                             <img src="./assets/img/bandMembers/musician2Compressed.webp" 
-                            class="bandMember " 
-                            alt="musician player who has long hair sitting in a chair looking straight forward">
+                            class="bandMember-profile " 
+                            alt="musician player who has long hair sitting in a chair looking straight forward" 
+                            style="object-position: top;">
+                            <p>Lead Singer</p>
+                            <p class="preview-bio">Jack is lead and Rhythm guitar he is the lead singer and songwriter of Longtooth.</p>
+                            <p class="full-bio">Jack grew up in a
+                                 house where each child had to play an instrument. 
+                                He has been shredding guitar ever since and has been involved in Rochester's metal scene for decades.  Jack is definitely the heart of the band with his powerful lyrics to his 
+                                insane guitar solos he takes his music in an introspective direction.</p>
+                            <button class="btn btn-outline-primary toggle-bio">Read More</button>
                         </div>
-                        <div class="bandMemberContainer  col-sm-4">
+
+                        <!--Band Member 2-->
+                        <div class="bandMemberContainer col-sm-4">
+                            <p>Paul</p>
                             <img src="./assets/img/bandMembers/updatedMusician3picCompressed.webp"  
-                             class="bandMember img-fluid" 
+                             class="bandMember-profile img-fluid" 
                              alt="Picture of man facing forward wearing a black leather jacket and a plack undershirt."
-                             width="300"
-                             height="400">
+                             style="object-position: top;">
+                           
+                             <p>Lead Singer</p>
+                             <p class="preview-bio">Paul plays bass guitar for longtooth. 
+                                Paul started playing the upstate New york thruway circuit in 1984 and has played with Rochester 
+                                legend SCORCHER.</p>
+                             <p class="full-bio" >His talent has reached many cities and locations, even bringing him to the Hollywood strip music scene where he played at iconic places and people.  
+                                Paul is the energy of the band with his commanding stage presence and his earth shaking bass chord</p>
+                             <button class="btn btn-outline-primary toggle-bio">Read More</button>
                         </div>
+
+                        <!--Band Member 3-->
                         <div class="bandMemberContainer  col-sm-4">
+                            <p>AJ</p>
                             <img src="./assets/img/bandMembers/musician1Compressed.webp" 
-                          
-                            class="bandMember img-fluid mx-auto" 
+                            class="bandMember-profile img-fluid mx-auto" 
                             alt="Man sitting in chair facing forward, man is wearing a hat"
-                            width="300"
-                            height="400">
+                            style="object-position: top;" >
+                            <p>Role</p>
+                            <p class="preview-bio"> Aj is the drummer and percussionist For longtooth. 
+                                Aj has Played a variety of different projects and collaborations all over Rochester.</p>
+                            <p class="full-bio">He joined Longtooth in early 2024 and has not looked back saying that this is one of his favorite yet challenging projects that he has been involved with. 
+                                 Aj is the vision of the band knowing now with the energy and talent of the group the sky's the limit. </p>
+                            <button class="btn btn-outline-primary toggle-bio">Read More</button>
                         </div>
+
                     </div>
                     <!--/Row-->
             </div>
@@ -176,5 +203,6 @@
 
             <!--Bootstrap JS files-->
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+            <script src="./js/script.js"></script>
     </body>
 </html>

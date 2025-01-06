@@ -96,11 +96,16 @@ body {
   border: 2px solid purple
 }
 
-.bandMember{
+
+/*#aboutSection .row > div {
+  margin-bottom: 20px;
+}*/
+
+.bandMember-profile{
     border: 10px solid transparent;
     margin-bottom: 25px;
-    width: 75%;
-    height: 75%;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     object-fit: cover;
     padding: 0;
@@ -124,6 +129,8 @@ body {
     text-align: center;
     margin-top: 20px;
   }
+
+.full-bio{display: none;}
 
   .embed-responsive-item {
     position: absolute;
@@ -169,13 +176,20 @@ body {
     }
 
     /* Styling for card images*/
-  .bandMember{
-    max-width: 100%;
-    max-height: auto;
+  .bandMember-profile{
+    max-width: 200px;
+    max-height: 200px;
     border-radius: 50%;
     object-fit: cover;
-  
+   
   }
+
+
+  .bandMember-item {
+    margin-bottom: 30px; /* Increase spacing for smaller screens */
+}
+
+ 
 
  
 
