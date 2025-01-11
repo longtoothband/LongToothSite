@@ -61,11 +61,16 @@ body {
     margin-top:40px;
   }
 
+  #musicSection{
+    border: 2px solid green;
+  }
+
   main{
     flex:1; /* Pushes footer to the bottom when there is not enough content*/
     background-color: #100f0f;
 
   }
+
 
   .gig-section{
     min-height: 400px;
@@ -87,19 +92,45 @@ body {
   margin-top: 5px;
 }
 
+
+.embed-responsive-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.embed-responsive-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .contact-btn{
   margin-top:5%;
 }
 
 #aboutSection {
-  min-height: 300px; /* Reserve sufficient height */
+  min-height: 350px; /* Reserve sufficient height */
   border: 2px solid purple
 }
 
 
+  #musicSection, #aboutSection{
+    background-color: rgb(67, 67, 76) !important;
+    text-align: center;
+    margin-top: 20px;
+  }
+
 /*#aboutSection .row > div {
   margin-bottom: 20px;
 }*/
+
+#aboutSection{
+  color:white;
+}
 
 .bandMember-profile{
     border: 10px solid transparent;
@@ -112,41 +143,27 @@ body {
   
 }
 
-.bandMember-item{
+/*.bandMember-item{
   border: 1px solid white;
   padding: 0;
   margin: 0;
   height:auto;
 
+}*/
+
+.bio-container{
+  position: relative;
+
 }
 
-#musicSection{
-  border: 2px solid green;
-}
-
-  #musicSection, #aboutSection{
-    background-color: rgb(67, 67, 76) !important;
-    text-align: center;
-    margin-top: 20px;
+.full-bio{
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.1s ease;
+  word-wrap: break-word;
+  /*display: none;*/
+  
   }
-
-.full-bio{display: none;}
-
-  .embed-responsive-item {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-  .embed-responsive-item {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
 
 .contactSection{
   margin-top: 20px;
