@@ -167,8 +167,23 @@ body {
 
 .contactSection{
   margin-top: 20px;
-  border: 2px solid pink;
+  padding: 5px;
+  max-height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+  
 }
+
+#contact-form{
+  width: 90%;
+  padding:10%;
+  ;
+  
+}
+
+
 
   footer {
     position: sticky;
