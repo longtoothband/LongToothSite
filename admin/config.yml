@@ -1,0 +1,18 @@
+backend:
+  name: git-gateway
+  repo: longtoothband/LongToothSite
+  branch: develop # Default branch name for your repo 
+  token: "${LONGTOOTH_GITHUB_TOKEN}"
+
+media_folder: "assets/images" # Folder for uploaded images
+public_folder: "/assets/images"
+
+collections:
+  - name: "gigs"
+    label: "Gigs"
+    folder: "content/gigs"
+    create: true
+    fields:
+      - { name: "date", label: "Date", widget: "datetime" }
+      - { name: "location", label: "Location", widget: "string" }
+      - { name: "details", label: "Details", widget: "text" }

@@ -11,16 +11,26 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
 
         <title>LongTooth</title>
+
+        <!--Stylesheet-->
         <link rel="stylesheet" href="css/styles.css">
+
+        <!--Emailjs script-->
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+        <script>
+        (function() {
+        emailjs.init("mq2m9pFC7sY4n-jMS"); // Replace YOUR_USER_ID with your actual EmailJS user ID
+            })();
+        </script>
         
     </head>
     <body>
          <!--Navigation Menu-->
-         <nav class="navbar navbar-expand-lg navbar-fixed-top navbar-dark" style="background-color: black;">
+         <nav class="navbar navbar-expand-lg fixed-top " style="background-color: black;">
             <div class="container-fluid" id="navbarContainter">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainNavBar" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-menu-text">Menu</span>
+                    <button type="button" class="navbar-toggler text-light" data-bs-toggle="collapse" data-bs-target="#mainNavBar" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-menu-text" style="color: white;">Menu</span>
                         <span class="navbar-toggler-icon"></span>
                         </button>           
                 </div>
@@ -37,7 +47,7 @@
         <!--End of Navigation Menu-->
         <header class="d-flex justify-content-between " style="background-color: black;">
             <div>
-                <img src="/assets/img/logo/logo.jpg" class="logoHeader img-fluid opacity-75">
+                <img src="/assets/img/logo/logo.jpg" class="logoHeader img-fluid opacity-75" alt="Longtooths band is displayed in all caps in the color neon green. An illustration of a wold if placed in the center">
             </div>
         </header>
 
@@ -45,23 +55,24 @@
             <!--Hero/Welcome Section-->
             <section id="hero" class="d-flex justify-content-center align-items-center"> 
                 <!--<h2 class="text-black text-center">Longtooth</h2>-->
-           
                 <!--Carousel-->
                 <div id="carouselHeader" class="carousel slide" data-bs-ride="carousel"> 
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="./assets/img/groupPhoto2Compressed.jpg" loading="lazy" class="d-block img-fluid opacity-75" alt="Slide 1 photo is of 3 men in black leather jackets with sunglasses on standing infront of a brick wall">
+                            <img src="./assets/img/bandMembers/groupPhoto2Compressed.webp" 
+                            loading="lazy" class="d-block img-fluid opacity-75" 
+                            alt="Slide 1 photo is of 3 men in black leather jackets with sunglasses on standing infront of a brick wall">
                         </div>
                         <div class="carousel-item">
-                            <img src="./assets/img/carousel/CarouselImg2Compressed.jpg" class="d-block img-fluid" alt="Slide 2 man with long hair playing the bass infront of microphone with purple back lighting">
+                            <img src="./assets/img/carousel/CarouselImg2Compressed.webp" loading="lazy" class="d-block img-fluid" alt="Slide 2 man with long hair playing the bass infront of microphone with purple back lighting">
                             
                         </div>
                         <div class="carousel-item">
-                            <img src="./assets/img/carousel/CarouselImg3Compressed.jpg" class="d-block  img-fluid" alt="Slide 3 man is sitting behind the drumb set pointing his finder at the camera with purple back lighting">
+                            <img src="./assets/img/carousel/CarouselImg3Compressed.webp" loading="lazy" class="d-block  img-fluid" alt="Slide 3 man is sitting behind the drumb set pointing his finder at the camera with purple back lighting">
                             
                         </div>
                         <div class="carousel-item">
-                            <img src="./assets/img/groupPhoto3Compressed.jpg" class="d-block w-100 img-fluid" alt="Slide 4, group of band members all sitting on stools in front of a rustic color background">  
+                            <img src="./assets/img/bandMembers/groupPhoto3Compressed.webp" loading="lazy" class="d-block w-100 img-fluid" alt="Slide 4, group of band members all sitting on stools in front of a rustic color background">  
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselHeader" data-bs-slide="prev">
@@ -73,91 +84,146 @@
                         <span class="visually-hidden">Next</span>
                     </button>
                 </div>
-              <!--  <div class="col-md-4">
-                <h2>BOOK NOW</h2>
-                </div> -->
             </section>
 
-        <section>
-            <h1 style="color: whitesmoke;">GIGs</h1>
+        <section id="gigs" class="gig-section container d-flex align-items-center justify-content-center">
+            <div class="gigs-container">
+                <div class="row d-flex ">
+                    <div class = "col-md-4 col-sm-6">
+                        <h3 style="color: whitesmoke;">Upcoming Shows</h3>
+                        <!-- Individual gig entries will be dynamically added here --> 
+                         <p>Lorem Ipsum</p>
+                         <p>Lorem Ipsum</p>
+                         <p>Lorem Ipsum</p>
+                         <p>Lorem Ipsum</p>
+                    </div>
+                     <div class="gigs-contact col-md-4 col-sm-6">
+                        <h3 style="color: whitesmoke;">Want to book us?</h2>
+                            <div class="contact-btn">
+                            <button type="button" class="btn btn-outline-primary"><a href="#contact-form">Contact</a></button>
+                        </div>
+                  </div>
+
+                </div>
+            </div>
+            <!--End of Gigs container-->
+            
             
         </section>
+        <!--End of Gigs Section-->
          
+        <!--Music Section-->
             <section class="containter py-4 " id="musicSection">
                 <!--Music Player-->
-                <div class="embed-responsive embed-responsive-16by9">
-                <iframe width="50%" height="300"
-                scrolling="no" frameborder="no" 
-                allow="autoplay" 
-                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1929659739&color=%23006fff&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-                <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/longtooth-898384277" title="Longtooth" target="_blank" style="color: #cccccc; text-decoration: none;">Find us on Soundcloud</a> <a href="https://soundcloud.com/longtooth-898384277/sets/long-tooth" title="Long Tooth" target="_blank" 
-                    style="color: #cccccc; text-decoration: none;"></a></div>
+            <iframe width="70%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1974497775&color=%23003aff&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/longtooth-898384277" title="Longtooth" target="_blank" style="color: #cccccc; text-decoration: none;">Longtooth</a> · <a href="https://soundcloud.com/longtooth-898384277/my-addiction-24" 
+                title="My Addiction 24" target="_blank" style="color: #cccccc; text-decoration: none;">My Addiction 24</a>
             </div>
+            <iframe width="70%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1997940103&color=%23003aff&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/longtooth-898384277" title="Longtooth" target="_blank" style="color: #cccccc; text-decoration: none;">Longtooth</a> · <a href="https://soundcloud.com/longtooth-898384277/bleed-fo-you-24"
+                title="Bleed fo you 24" target="_blank" style="color: #cccccc; text-decoration: none;">Bleed fo you 24</a></div>
                 <!--End of music player block-->
-
             </section>
-            
+            <!--/Music Section-->
 
             <!--About Section-->
-            <section class="container py-5" id="aboutSection"> 
-                <p>Located in Rochester NY, Long Tooth is a Metal band formed in 1997 by lead singer Jack Burnett and bass player Paul Van San.</p>
-                <h2>Meet The Band</h2>
-            </section>
-                <div class="container" id="bandMemberContainer">
+            <section class="container py-3" id="aboutSection"> 
+                <p>Located in Rochester NY, Long Tooth is a Metal band that was formed in 1997 by lead singer Jack Burnett <br> and bass player Paul Van San.</p>
+                <h2>The Band</h2>
+                <div class="container d-flex justify-content-center align-items-center" id="bandMemberContainer">
                     <div class="row"> 
-                        <div class="col-md-4 col-sm-6 d-flex mb-4 justify-content-center">
-                            <div class="card" style="  background-color: #100f0f;">
-                                <img src="./assets/img/musician2Compressed.jpg" class="card-img-top img-fluid mx-auto mt-3" alt="musician player who has long hair sitting in a chair looking straight forward">
-                                <div class="card-body">
-                                   <h5 class="card-title">Jack Burnett </h5> 
-                                   <h5 class="card-text card-text-center">Jack is lead and Rhythm guitar he is the lead singer and songwriter of Longtooth.</h5>
-                                </div>
-                            </div>
+
+                        <!--Band Member 1: Jack-->
+                        <div class="bandMemberContainer col-sm-4">
+                            <img src="./assets/img/bandMembers/musician2Compressed.webp" 
+                            class="bandMember-profile img-fluid" 
+                            alt="musician player who has long hair sitting in a chair looking straight forward" 
+                            style="object-position: top;">
+                            <p><strong>  Jack Burnett</strong></p>
+                            <p>Lead Singer</p>
+                            <div class="bio-container">
+                            <p class="preview-bio">Jack is lead and Rhythm guitar he is the lead singer and songwriter of Longtooth.</p>
+                            <p class="full-bio" >Jack grew up in a
+                                 house where each child had to play an instrument. 
+                                He has been shredding guitar ever since and has been involved in Rochester's metal scene for decades.  Jack is definitely the heart of the band with his powerful lyrics to his 
+                                insane guitar solos he takes his music in an introspective direction.</p>
+                            <button class="btn btn-outline-primary toggle-bio">Read More</button>
+                        </div>  
+                        <!--bio-container--> 
                         </div>
-                        <!--/FirstBandMember-->
-                        <div class="col-md-4 col-sm-6 d-flex mb-4 justify-content-center">
-                            <div class="card" style="  background-color: #100f0f;">
-                                <img src="./assets/img/musician3Compressed.jpg" class="card-img-top img-fluid mx-auto mt-3" loading="lazy" alt="musician player who has long hair sitting in a chair looking straight forward">
-                                <div class="card-body">
-                                   <h5 class="card-title">Paul Van Sant</h5> 
-                                   <h5 class="card-text card-text-center"> Paul plays bass guitar for longtooth. Pual started playing the upstate New york thruway circuit in 1984 and has played with Rochester legend SCORCHER.</h5>
-                                </div>
+
+                        <!--Band Member 2: Paul-->
+                        <div class="bandMemberContainer col-sm-4">
+                            <img src="./assets/img/bandMembers/updatedMusician3picCompressed.webp"  
+                             class="bandMember-profile img-fluid" 
+                             alt="Picture of man facing forward wearing a black leather jacket and a plack undershirt."
+                             style="object-position: top;">
+                             <p> Paul Van Sant</p>
+                             <p>Bass Player</p>
+                             <div class="bio-container">
+                             <p class="preview-bio">Paul plays bass guitar for longtooth. 
+                                Paul started playing the upstate New york thruway circuit in 1984 and has played with Rochester 
+                                legend SCORCHER.</p>
+                             <p class="full-bio" >His talent has reached many cities and locations, even bringing him to the Hollywood strip music scene where he played at iconic places and people.  
+                                Paul is the energy of the band with his commanding stage presence and his earth shaking bass chord.</p>
+                             <button class="btn btn-outline-primary toggle-bio">Read More</button>
                             </div>
+                            <!--/bio-container-->
                         </div>
-                        <!--/SecondBandMember-->
-                        <div class="col-md-4 col-sm-6 d-flex mb-4 justify-content-center">
-                            <div class="card" style=" background-color: #100f0f;">
-                                <img src="./assets/img/musician1Compressed.jpg" class="card-img-top img-fluid mx-auto mt-3" loading="lazy" alt="musician player who has long hair sitting in a chair looking straight forward">
-                                <div class="card-body">
-                                   <h5 class="card-title">AJ Secash  </h5> 
-                                   <h5 class="card-text card-text-center">Aj is the drummer and percussionist For longtooth.  Aj has Played a variety of different projects and collaborations all over Rochester.</h5>
-                                </div>
-                            </div>
+
+                        <!--Band Member 3: Aj-->
+                        <div class="bandMemberContainer  col-sm-4">
+                            <img src="./assets/img/bandMembers/musician1Compressed.webp" 
+                            class="bandMember-profile img-fluid mx-auto" 
+                            alt="Man sitting in chair facing forward, man is wearing a hat"
+                            style="object-position: top;" >
+                            <p> AJ Secash </p>
+                            <p>Drummer</p>
+                            <div class="bio-container">
+                            <p class="preview-bio"> Aj is the drummer and percussionist For longtooth. 
+                                Aj has Played a variety of different projects and collaborations all over Rochester.</p>
+                            <p class="full-bio">He joined Longtooth in early 2024 and has not looked back saying that this is one of his favorite yet challenging projects that he has been involved with. 
+                                 Aj is the vision of the band knowing now with the energy and talent of the group the sky's the limit. </p>
+                            <button class="btn btn-outline-primary toggle-bio">Read More</button>
                         </div>
-                        <!--ThirdBandMember-->
+                        <!--/bio-container-->
+                        </div>
+
                     </div>
                     <!--/Row-->
             </div>
             <!--/bandMemberContainer-->
-           
             </section>
-
             
-            <section>
-                Contact form
+            <!--Contact Section-->
+            <section class="contactSection">
+                <h3 style="color: whitesmoke;">Contact/Send message</h3>
+                <form id="contact-form">
+                <div class="mb-3">
+                    <label for="FormControlInput1" class="form-label" style="color: whitesmoke;">Full Name</label>
+                    <input type="text" class="form-control" id="fullName" placeholder="Enter first and last name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="FormControlInput1" class="form-label " style="color: whitesmoke;">Email address</label>
+                    <input type="email" class="form-control" id="email_id" placeholder="Enter Email" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="FormControlTextarea1" class="form-label" style="color: whitesmoke;">Message</label>
+                    <textarea class="form-control" id="message" rows="3"></textarea>
+                    <button class="btn btn-outline-primary mt-3" type="submit">Send</button>
+                  </form>
+                  </div>
             </section>
-            <img src="./assets/img/groupPhoto3.jpg" loading="lazy" class="img-fluid opacity-75" alt="Three men sitting in chairs in front of a colorful wall filled with oranges and blues">
+            <!--/Contact Section-->
+            <img src="./assets/img/bandMembers/groupPhoto3Compressed.webp" loading="lazy" class="img-fluid opacity-75" alt="Three men sitting in chairs in front of a colorful wall filled with oranges and blues">
         </main>
 
-    
-
+        <!--Footer-->
         <footer class="bg-dark text-white text-center py-3" id="footer">
             <p>&copy; 2024 LongTooth | <a href="#" class="text-white">Privacy Policy</a></p>
           </footer>
 
-
-
             <!--Bootstrap JS files-->
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+            <script src="./js/script.js"></script>
+            
     </body>
 </html>
