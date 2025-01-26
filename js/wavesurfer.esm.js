@@ -19,6 +19,10 @@ const wavesurfer1 = WaveSurfer.create({
     barWidth: 2,
     barGap: 1,
     barRadius: 2,
+    height:110,
+    audioRate: 1,
+    cursorWidth: 2,
+    
   });
 
   wavesurfer1.on('loading', (percent) => {

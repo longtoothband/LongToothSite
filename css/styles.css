@@ -205,6 +205,16 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
 }
+
+
+.controls button:hover {
+  background-color: #555;
+}
+
+.controls button:active {
+  transform: scale(0.95);
+}
+
   /******End of music player styling**********/
 
   main{
