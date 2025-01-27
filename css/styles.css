@@ -8,9 +8,21 @@ html,body{
     height: 100%; /* Ensure the body fills the viewport */
 }
 
+h1{
+  font-family:'Metal Mania';
+}
+
+p{
+  font-family: 'Montserrat';
+}
+
+.btn{
+  font-family: 'Montserrat';
+}
 .nav{
   font-size: large;
   margin-left: 40%;
+  font-family: 'Montserrat';
 }
 
 .navbar{
@@ -252,15 +264,12 @@ body {
 }
 
 
-  #musicSection, #aboutSection{
+   #aboutSection{
     background-color: rgb(67, 67, 76) !important;
     text-align: center;
     margin-top: 20px;
+    color:white;
   }
-
-#aboutSection{
-  color:white;
-}
 
 .bandMember-profile{
     border: 10px solid transparent;
