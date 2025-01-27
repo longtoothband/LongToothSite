@@ -14,7 +14,7 @@ let currentTrackIndex = 0;
 // Wavesurfer
 const wavesurfer1 = WaveSurfer.create({
     container: '#waveform1',
-    waveColor: 'rgb(200, 0, 200)',  // Waveform color
+    waveColor: 'rgb(0,51,255)',  // Waveform color
     progressColor: 'rgb(100, 0, 100)', // Progress color
     barWidth: 2,
     barGap: 1,
@@ -35,16 +35,13 @@ const wavesurfer1 = WaveSurfer.create({
     if(track){
       wavesurfer1.load(track.filePath);
       document.getElementById("trackTitle").innerText = track.title;
-      wavesurfer1.on("ready", ()=>{
-        wavesurfer1.play();
-        const playPauseIcon = document.getElementById("playPause1").querySelector("i");
-        playPauseIcon.classList.remove("bi-play-fill");
-        playPauseIcon.classList.add("bi-pause-fill");
-      });
-
     }
   }
 
+
+  //const playPauseIcon = document.getElementById("playPause1").querySelector("i");
+  //playPauseIcon.classList.remove("bi-play-fill");
+  //playPauseIcon.classList.add("bi-pause-fill");
   
 // Play/Pause Button
 document.getElementById("playPause1").addEventListener("click", function () {
