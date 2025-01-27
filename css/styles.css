@@ -105,9 +105,9 @@ body {
 
   #waveform1, #waveform2 {
   width: 100%;
-  height: 100px;
+  height: 105px;
   margin: 10px 0;
-  background: #09f900;
+  background: #00ff2a;
   border-radius: 5px;
 }
   
