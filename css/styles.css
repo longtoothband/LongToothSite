@@ -61,9 +61,6 @@ body {
     margin-top:40px;
   }
 
-  #musicSection{
-    /*border: 2px solid green;*/
-  }
 
   /*Music player styling*/
   #music-player {
@@ -245,21 +242,6 @@ body {
 }
 
 
-.embed-responsive-item {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.embed-responsive-item {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
 .contact-btn{
   margin-top:5%;
 }
@@ -276,10 +258,6 @@ body {
     margin-top: 20px;
   }
 
-/*#aboutSection .row > div {
-  margin-bottom: 20px;
-}*/
-
 #aboutSection{
   color:white;
 }
@@ -294,14 +272,6 @@ body {
     padding: 0;
   
 }
-
-/*.bandMember-item{
-  border: 1px solid white;
-  padding: 0;
-  margin: 0;
-  height:auto;
-
-}*/
 
 .bio-container{
   position: relative;
