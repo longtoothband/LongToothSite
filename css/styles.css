@@ -1,28 +1,26 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing:border-box;
  
 }
 
 html,body{
     height: 100%; /* Ensure the body fills the viewport */
+    font-family: Arial, sans-serif;
 }
 
 h1{
   font-family:'Metal Mania';
 }
 
-p{
+p, .btn, .nav{
   font-family: 'Montserrat';
 }
 
-.btn{
-  font-family: 'Montserrat';
-}
 .nav{
   font-size: large;
   margin-left: 40%;
-  font-family: 'Montserrat';
 }
 
 .navbar{
@@ -64,7 +62,6 @@ body {
   }
 
   header {
-    /*position: sticky;*/
     top: 0;
     z-index: 1000;
   }
@@ -73,6 +70,34 @@ body {
     margin-top:40px;
   }
 
+/*Gigs section*/
+.gig-section{
+  min-height: 400px;
+  text-align: center;
+  position: relative;
+  padding: 20px;
+  position: relative;
+}
+
+.gigs-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  
+
+}
+
+.gigs-container .row > div {
+  padding:10px;
+  box-sizing: border-box;
+  height: auto;
+}
+
+.gigs-contact{
+   margin-top: 5px;
+ }
+ 
 
   /*Music player styling*/
   #music-player {
@@ -233,25 +258,10 @@ body {
   }
 
 
-  .gig-section{
-    min-height: 400px;
-   /* border: solid 1px white;*/
-    text-align: center;
-    /*border: 2px solid blue*/
-  }
 
-  .gigs-container .row > div {
-    min-height: 150px; /* Reserve space for each column */
-   /*border: solid 1px white;*/
-    padding-top:5px;
-    /*border: 2px solid blue*/
 
-}
 
-.gigs-contact{
- /* border: 1px solid white;*/
-  margin-top: 5px;
-}
+
 
 
 .contact-btn{
