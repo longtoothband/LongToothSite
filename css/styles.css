@@ -12,6 +12,7 @@ html,body{
 
 h1{
   font-family:'Metal Mania';
+  color: whitesmoke;
 }
 
 p, .btn, .nav{
@@ -41,6 +42,10 @@ background-color:black;
 a:hover {
   text-decoration: underline;
   border-bottom: 1px solid blue;
+}
+
+p{
+  color: whitesmoke;
 }
 
 .logoHeader{
@@ -324,6 +329,10 @@ body {
 #contact-form{
   width: 90%;
   padding:10%;  
+}
+
+.form-label{
+  font-family: 'Montserrat';
 }
 
 #footerImage{
