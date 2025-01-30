@@ -1,3 +1,5 @@
+//import WaveSurfer from '/node_modules/wavesurfer.js';
+
 emailjs.init("mq2m9pFC7sY4n-jMS")
 
 // SendMail function
@@ -23,8 +25,7 @@ function SendMail(event){
 // Add event listener to form
 document.getElementById("contact-form").addEventListener("submit", SendMail);
 
-
-
+// Bio toggles
 document.querySelectorAll('.toggle-bio').forEach(button => {
     button.addEventListener('click', () => {
         const bioContainer = button.previousElementSibling;
@@ -42,4 +43,48 @@ document.querySelectorAll('.toggle-bio').forEach(button => {
         }
     });
 });
+
+
+// Music player// 
+document.querySelectorAll('.play-pause').forEach(button => {
+    button.addEventListener('click', function () {
+      const audioId = this.dataset.audio;
+      const audio = document.getElementById(audioId);
+      const icon = this.querySelector('.bi');
+  
+      // Pause all other tracks
+      document.querySelectorAll('audio').forEach(otherAudio => {
+        if (otherAudio !== audio) {
+          otherAudio.pause();
+          otherAudio.currentTime = 0; // Reset other tracks
+        }
+      });
+  
+      // Play or pause the current track
+      if (audio.paused) {
+        audio.play();
+        icon.classList.remove('bi-play-fill');
+        icon.classList.add('bi-pause-fill');
+      } else {
+        audio.pause();
+        icon.classList.remove('bi-pause-fill');
+        icon.classList.add('bi-play-fill');
+      }
+  
+      // Update progress bar
+      audio.addEventListener('timeupdate', () => {
+        const progressBar = this.nextElementSibling;
+        progressBar.value = (audio.currentTime / audio.duration) * 100;
+      });
+  
+      // Reset button when audio ends
+      audio.addEventListener('ended', () => {
+        icon.classList.add('bi-play-fill');
+      });
+    });
+  });
+
+
+
+   
 
