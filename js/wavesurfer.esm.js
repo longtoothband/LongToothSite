@@ -6,6 +6,9 @@ const trackList = [
   {title:"Bleed for You", filePath: "/assets/audio/Bleed fo you 24.mp3"},
   {title:"Half Step from Heaven", filePath:  "/assets/audio/Half Step from Heaven wav.mp3"},
   {title:"Last Day", filePath:"/assets/audio/Last Day.mp3"},
+  {title:"RISE", filePath:"/assets/audio/RISE.mp3"},
+  {title:"Tears Fall", filePath:"/assets/audio/Tears Fall.mp3"},
+  {title:"Where is the Love", filePath: "/assets/audio/Where is the Love.mp3"},
 ];
 
 //Set tracks current index 
