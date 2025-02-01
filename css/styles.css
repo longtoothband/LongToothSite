@@ -96,7 +96,14 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
   padding: 20px;
+  color: white;
+ 
 }
+
+#gigs-list{
+  color: white;
+}
+
 
 .gigs-container .row > div {
   padding:10px;
@@ -106,6 +113,7 @@ body {
 
 .gigs-contact{
    margin-top: 5px;
+   
  }
  
 
