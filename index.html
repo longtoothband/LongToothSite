@@ -19,6 +19,10 @@
         <!--Stylesheet-->
         <link rel="stylesheet" href="css/styles.css">
 
+
+        <!--Preload first carousel image-->
+        <link rel="preload" as="image" href="/assets/img/groupPhoto2.webp">
+
         <!--Emailjs script-->
         <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
         <script>
@@ -26,6 +30,8 @@
         emailjs.init("mq2m9pFC7sY4n-jMS"); // Replace YOUR_USER_ID with your actual EmailJS user ID
             })();
         </script>
+
+        <script src="/js/gigs-display.js"></script> 
     </head>
     <body>
          <!--Navigation Menu-->
@@ -61,30 +67,30 @@
                 <div id="carouselHeader" class="carousel slide" data-bs-ride="carousel"> 
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="./assets/img/bandMembers/groupPhoto2Compressed.webp" 
-                            loading="lazy" class="d-block img-fluid opacity-75" 
+                            <img src="./assets/img/groupPhoto2.webp" 
+                            loading="eagerly" class="d-block img-fluid opacity-75" 
                             alt="Slide 1 photo is of 3 men in black leather jackets with sunglasses on standing infront of a brick wall">
                         </div>
                         <div class="carousel-item">
-                            <img src="./assets/img/carousel/CarouselImg2Compressed.webp" loading="lazy" class="d-block img-fluid" alt="Slide 2 man with long hair playing the bass infront of microphone with purple back lighting">
+                            <img src="./assets/img/carousel/updatedCarouselImage2.webp" loading="lazy" class="d-block img-fluid" alt="Slide 2 man with long hair playing the bass infront of microphone with purple back lighting">
                         </div>
                         <div class="carousel-item">
-                            <img src="./assets/img/carousel/carouselImage4.webp" loading="lazy" class="d-block img-fluid" alt="Slide 2 man with long hair playing the bass infront of microphone with purple back lighting">
+                            <img src="./assets/img/carousel/carouselImage4.webp" loading="lazy" class="d-block img-fluid" alt="Slide 3 man with long hair playing the bass infront of microphone with purple back lighting">
                         </div>
                         <div class="carousel-item">
-                            <img src="./assets/img/carousel/groupImage5.webp" loading="lazy" class="d-block  img-fluid" alt="Slide 3 man is sitting behind the drumb set pointing his finder at the camera with purple back lighting">
+                            <img src="./assets/img/carousel/updatedGroupImae5.webp" loading="lazy" class="d-block  img-fluid" alt="Slide 4 man is sitting behind the drumb set pointing his finder at the camera with purple back lighting">
                         </div>
                         <div class="carousel-item">
-                            <img src="./assets/img/carousel/CarouselImg3Compressed.webp" loading="lazy" class="d-block  img-fluid" alt="Slide 3 man is sitting behind the drumb set pointing his finder at the camera with purple back lighting">
+                            <img src="./assets/img/carousel/CarouselImg3.webp" loading="lazy" class="d-block  img-fluid" alt="Slide 5 man is sitting behind the drumb set pointing his finder at the camera with purple back lighting">
                         </div>
                         <div class="carousel-item">
-                            <img src="./assets/img/carousel/groupImage4.webp" loading="lazy" class="d-block  img-fluid" alt="Slide 3 man is sitting behind the drumb set pointing his finder at the camera with purple back lighting">
+                            <img src="./assets/img/carousel/fixedCarouselImage.webp" loading="lazy" class="d-block  img-fluid" alt="Slide 6 man is sitting behind the drumb set pointing his finder at the camera with purple back lighting">
+                        </div><!---->
+                        <div class="carousel-item">
+                            <img src="./assets/img/carousel/UpdatedCarouselImage5.webp" loading="lazy" class="d-block w-100 img-fluid" alt="Slide 7, group of band members all sitting on stools in front of a rustic color background">  
                         </div>
                         <div class="carousel-item">
-                            <img src="./assets/img/carousel/UpdatedCarouselImage5.webp" loading="lazy" class="d-block w-100 img-fluid" alt="Slide 4, group of band members all sitting on stools in front of a rustic color background">  
-                        </div>
-                        <div class="carousel-item">
-                            <img src="./assets/img/bandMembers/groupPhoto3Compressed.webp" loading="lazy" class="d-block w-100 img-fluid" alt="Slide 4, group of band members all sitting on stools in front of a rustic color background">  
+                            <img src="./assets/img/carousel/updatedGroupPhoto3.webp" loading="lazy" class="d-block w-100 img-fluid" alt="Slide 8, group of band members all sitting on stools in front of a rustic color background">  
                         </div>
                        
                     </div>
@@ -99,16 +105,14 @@
                 </div>
             </section>
 
-        <section id="gigs" class="gig-section container">
+        <section id="gigs" class="gig-section containe align-items-center">
             <div class="gigs-container">
                 <div class="row d-flex ">
                     <div class = "col-md-4 col-sm-6">
                         <h1>Upcoming Shows</h1>
+                        <div id="gigs-list">
                         <!-- Individual gig entries will be dynamically added here --> 
-                         <p>Lorem Ipsum</p>
-                         <p>Lorem Ipsum</p>
-                         <p>Lorem Ipsum</p>
-                         <p>Lorem Ipsum</p>
+                    </div>
                     </div>
                      <div class="gigs-contact col-md-4 col-sm-6">
                         <h1 >Want to book us?</h1>
@@ -247,7 +251,11 @@
             <!--Bootstrap JS files-->
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 
-            <script src="./js/script.js"></script>
+            <script src="/js/script.js"></script>
+
+            <script src="/js/gigs.mjs"></script>
+
+          
 
             <script type="module" src="./js/wavesurfer.esm.js"></script>
 
