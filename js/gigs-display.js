@@ -5,10 +5,16 @@ document.addEventListener("DOMContentLoaded", () => {
     fetch(gigsDataURL)
       .then((res) => res.json())
       .then((gigs) => {
+        console.log("Fetched gigs:", gigs); // Log the gigs data
         const gigsList = document.getElementById("gigs-list");
   
         // Clear the container (if needed)
-        gigsList.innerHTML = "";
+        //gigsList.innerHTML = "";
+        if ( gigs.length === 0){
+            console.log("No upcoming shows detected");
+            gigsList.innerHTML=`<p class = "text-center text-muted"> No upcoming shows.</p>`;
+            return;
+        }
   
         // Loop through gigs and create elements
         gigs.forEach((gig) => {
@@ -27,6 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
       })
       .catch((error) => {
         console.error("Error fetching gigs data:", error);
+        document.getElementById("gigs-list").innerHTML = `<p class="text-center text-danger">Error loading shows. Please check back later.</p>`;
       });
   });
   
