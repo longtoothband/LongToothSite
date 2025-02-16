@@ -49,14 +49,18 @@ const wavesurfer1 = WaveSurfer.create({
 // Play/Pause Button
 document.getElementById("playPause1").addEventListener("click", function () {
   const icon = this.querySelector("i");
+  const textElement = this.nextElementSibling; // Get the span element containing the text
   if (wavesurfer1.isPlaying()) {
     wavesurfer1.pause();
     icon.classList.remove("bi-pause-fill");
     icon.classList.add("bi-play-fill");
+    textElement.innerText = "Play"; // Update text to Play
+
   } else {
     wavesurfer1.play();
     icon.classList.remove("bi-play-fill");
     icon.classList.add("bi-pause-fill");
+    textElement.innerText = "Pause"; // Update text to Pause
   }
 });
 
