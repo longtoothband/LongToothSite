@@ -11,6 +11,8 @@ const trackList = [
 
 let currentTrackIndex = 0;
 let trackReady = false;
+let loadStarted = false;
+let playAfterLoad = false;
 
 if (window.location.protocol === "file:") {
   const title = document.getElementById("trackTitle");
@@ -31,12 +33,43 @@ const wavesurfer1 = WaveSurfer.create({
     cursorWidth: 2,
   });
 
+const playPauseButton = document.getElementById("playPause1");
+
+function playButtonParts() {
+  return {
+    icon: playPauseButton.querySelector("i"),
+    textElement: playPauseButton.nextElementSibling,
+  };
+}
+
+function resetPlayButton() {
+  const { icon, textElement } = playButtonParts();
+  icon.classList.remove("bi-pause-fill");
+  icon.classList.add("bi-play-fill");
+  textElement.innerText = "Play";
+}
+
+function setPlayingButton() {
+  const { icon, textElement } = playButtonParts();
+  icon.classList.remove("bi-play-fill");
+  icon.classList.add("bi-pause-fill");
+  textElement.innerText = "Pause";
+}
+
 wavesurfer1.on('ready', () => {
   trackReady = true;
+  if (playAfterLoad) {
+    playAfterLoad = false;
+    wavesurfer1.play().then(setPlayingButton).catch((err) => {
+      console.error("Playback failed:", err);
+      resetPlayButton();
+    });
+  }
 });
 
 wavesurfer1.on('error', (err) => {
   trackReady = false;
+  playAfterLoad = false;
   console.error('WaveSurfer error:', err);
 });
 
@@ -46,59 +79,60 @@ function loadTrack(index){
     return;
   }
   trackReady = false;
+  loadStarted = true;
+  wavesurfer1.pause();
   wavesurfer1.load(encodeURI(track.filePath));
   document.getElementById("trackTitle").innerText = track.title;
 }
 
-function resetPlayButton(icon, textElement) {
-  icon.classList.remove("bi-pause-fill");
-  icon.classList.add("bi-play-fill");
-  textElement.innerText = "Play";
+function ensureCurrentTrackLoaded() {
+  if (!loadStarted) {
+    loadTrack(currentTrackIndex);
+  }
 }
 
-document.getElementById("playPause1").addEventListener("click", function () {
-  const icon = this.querySelector("i");
-  const textElement = this.nextElementSibling;
+playPauseButton.addEventListener("click", function () {
   if (wavesurfer1.isPlaying()) {
     wavesurfer1.pause();
-    resetPlayButton(icon, textElement);
+    resetPlayButton();
     return;
   }
 
-  if (!trackReady) {
+  if (!loadStarted || !trackReady) {
+    playAfterLoad = true;
+    ensureCurrentTrackLoaded();
     return;
   }
 
-  wavesurfer1.play().then(() => {
-    icon.classList.remove("bi-play-fill");
-    icon.classList.add("bi-pause-fill");
-    textElement.innerText = "Pause";
-  }).catch((err) => {
+  wavesurfer1.play().then(setPlayingButton).catch((err) => {
     console.error("Playback failed:", err);
-    resetPlayButton(icon, textElement);
+    resetPlayButton();
   });
 });
 
 document.getElementById('nextTrack').addEventListener('click', () => {
+  playAfterLoad = false;
   currentTrackIndex = (currentTrackIndex + 1) % trackList.length;
+  resetPlayButton();
   loadTrack(currentTrackIndex);
-  const playPause = document.getElementById("playPause1");
-  resetPlayButton(playPause.querySelector("i"), playPause.nextElementSibling);
 });
 
 document.getElementById("prevTrack").addEventListener("click", () => {
+  playAfterLoad = false;
   currentTrackIndex = (currentTrackIndex - 1 + trackList.length) % trackList.length;
+  resetPlayButton();
   loadTrack(currentTrackIndex);
-  const playPause = document.getElementById("playPause1");
-  resetPlayButton(playPause.querySelector("i"), playPause.nextElementSibling);
 });
 
-function initFirstTrack() {
-  loadTrack(currentTrackIndex);
-}
-
-if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", initFirstTrack);
+const playerEl = document.getElementById("music-player");
+if (playerEl && "IntersectionObserver" in window) {
+  const observer = new IntersectionObserver((entries) => {
+    if (entries.some((entry) => entry.isIntersecting)) {
+      ensureCurrentTrackLoaded();
+      observer.disconnect();
+    }
+  }, { rootMargin: "200px" });
+  observer.observe(playerEl);
 } else {
-  initFirstTrack();
+  ensureCurrentTrackLoaded();
 }
