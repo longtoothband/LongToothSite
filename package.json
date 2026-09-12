@@ -1,4 +1,8 @@
 {
+  "scripts": {
+    "start": "python3 -m http.server 8080",
+    "update-gigs": "node js/gigs.mjs"
+  },
   "dependencies": {
     "node-fetch": "^3.3.2",
     "wavesurfer.js": "^7.8.16"
