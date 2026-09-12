@@ -21,6 +21,38 @@ function SendMail(event) {
 
 document.getElementById("contact-form").addEventListener("submit", SendMail);
 
+function warmCarouselImages() {
+    const carousel = document.getElementById("carouselHeader");
+    if (!carousel) {
+        return;
+    }
+
+    const imgs = Array.from(carousel.querySelectorAll(".carousel-item img"));
+
+    function preload(img) {
+        if (!img) {
+            return;
+        }
+        img.loading = "eager";
+        const warm = new Image();
+        warm.src = img.currentSrc || img.src;
+    }
+
+    preload(imgs[1]);
+
+    carousel.addEventListener("slide.bs.carousel", (event) => {
+        const nextIndex = event.to;
+        preload(imgs[nextIndex]);
+        preload(imgs[(nextIndex + 1) % imgs.length]);
+    });
+}
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", warmCarouselImages);
+} else {
+    warmCarouselImages();
+}
+
 document.querySelectorAll('.toggle-bio').forEach(button => {
     button.addEventListener('click', () => {
         const bioContainer = button.previousElementSibling;
