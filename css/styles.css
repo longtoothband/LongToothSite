@@ -20,7 +20,7 @@ p, .btn, .nav-link{
 }
 
 html {
-  scroll-padding-top: 5.25rem;
+  scroll-padding-top: 6.25rem;
 }
 
 .site-nav {
@@ -47,7 +47,7 @@ html {
 
 .site-nav-wordmark-img {
   display: block;
-  height: 56px;
+  height: 74px;
   width: auto;
   max-width: none;
   flex-shrink: 0;
@@ -100,7 +100,7 @@ body {
     flex-direction: column;
     font-family: Arial, sans-serif;
     padding: 0;
-    padding-top: 5.25rem;
+    padding-top: 6.25rem;
   }
 
 a:hover {
