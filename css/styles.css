@@ -74,13 +74,13 @@ html {
 }
 
 .site-nav .nav-link {
-  font-size: 0.78rem;
+  font-size: 0.72rem;
   font-weight: 600;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   white-space: nowrap;
   color: rgba(255, 255, 255, 0.82) !important;
-  padding: 0.55rem 0.55rem !important;
+  padding: 0.45rem 0.4rem !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: geometricPrecision;
@@ -111,7 +111,7 @@ html {
   box-shadow: 0 0 0 0.15rem rgba(59, 130, 246, 0.45);
 }
 
-@media (max-width: 1199.98px) {
+@media (max-width: 991.98px) {
   .site-nav,
   .site-nav-inner {
     flex-wrap: wrap;
