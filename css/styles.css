@@ -20,7 +20,7 @@ p, .btn, .nav-link{
 }
 
 html {
-  scroll-padding-top: 4.75rem;
+  scroll-padding-top: 5.25rem;
 }
 
 .site-nav {
@@ -33,19 +33,24 @@ html {
 }
 
 .site-nav-inner {
-  max-width: 1280px;
+  max-width: none;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
 .site-nav-brand {
   padding-top: 0;
   padding-bottom: 0;
   margin-right: 1.25rem;
+  flex-shrink: 0;
 }
 
 .site-nav-wordmark-img {
   display: block;
-  height: 42px;
+  height: 56px;
   width: auto;
+  max-width: none;
+  flex-shrink: 0;
 }
 
 .site-nav .navbar-nav {
@@ -95,7 +100,7 @@ body {
     flex-direction: column;
     font-family: Arial, sans-serif;
     padding: 0;
-    padding-top: 4.75rem;
+    padding-top: 5.25rem;
   }
 
 a:hover {
@@ -429,10 +434,6 @@ opacity: 75%;
   }
 
   @media (max-width: 576px) {
-    .site-nav-wordmark-img {
-        height: 32px;
-    }
-
     #hero img {
         max-height: 300px;
     }
