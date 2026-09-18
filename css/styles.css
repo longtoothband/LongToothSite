@@ -22,7 +22,7 @@ p, .btn, .nav-link{
 }
 
 html {
-  scroll-padding-top: 6.25rem;
+  scroll-padding-top: 5.75rem;
 }
 
 .site-nav {
@@ -32,12 +32,18 @@ html {
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   padding-top: 0.4rem;
   padding-bottom: 0.4rem;
+  min-height: 5.75rem;
+  flex-wrap: nowrap;
+  align-items: center;
 }
 
 .site-nav-inner {
   max-width: none;
   padding-left: 1.25rem;
   padding-right: 1.25rem;
+  flex-wrap: nowrap;
+  align-items: center;
+  min-height: 5.75rem;
 }
 
 .site-nav-brand {
@@ -59,6 +65,12 @@ html {
 
 .site-nav .navbar-nav {
   gap: 0.15rem;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.site-nav .navbar-collapse {
+  flex-grow: 1;
 }
 
 .site-nav .nav-link {
@@ -66,8 +78,9 @@ html {
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+  white-space: nowrap;
   color: rgba(255, 255, 255, 0.82) !important;
-  padding: 0.55rem 0.7rem !important;
+  padding: 0.55rem 0.55rem !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: geometricPrecision;
@@ -98,6 +111,17 @@ html {
   box-shadow: 0 0 0 0.15rem rgba(59, 130, 246, 0.45);
 }
 
+@media (max-width: 1199.98px) {
+  .site-nav,
+  .site-nav-inner {
+    flex-wrap: wrap;
+  }
+
+  .site-nav .navbar-nav {
+    flex-wrap: wrap;
+  }
+}
+
 .content-stub {
   text-align: center;
   padding: 3rem 1.25rem;
@@ -109,7 +133,7 @@ body {
     flex-direction: column;
     font-family: Arial, sans-serif;
     padding: 0;
-    padding-top: 6.25rem;
+    padding-top: 5.75rem;
   }
 
 a:hover {
