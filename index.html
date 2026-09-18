@@ -12,7 +12,7 @@
         <!--Google fonts-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
-        <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&family=Playfair+Display:wght@500;600&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
         <title>LongTooth</title>
 
@@ -132,38 +132,43 @@
         </section>
         <!--End of Gigs Section-->
 
-            <!--Music Player-->
-            <div>
-                <h1 style="text-align: center; color: whitesmoke;" id="ourMusic">Our Music</h1>
-                <div id="music-player">                
- <!-------NEW SOUND CLOUD INSPIRED MUSIC PLAYER----->
-                      <div class="media-player">
-                        <div class="album-cover">
-                            <img src="./assets/img/logo/albumCover.webp" alt="Bands album cover with the title of the band displayed"> 
-                        </div>   
-                        <!-- Waveform -->
-                         <div id="waveform1" class="waveform"></div>
-                         <div id="trackTitle">Half Step From Heaven</div> <!-- Default title -->
-                          <!-- Controls -->
-                         <div class="controls d-flex justify-content-center align-items-center">
-                            <div  class="text-center mx-2">
-                                <button id="prevTrack" alt="backward button"><i class="bi bi-skip-backward-fill"></i></button>
-                                <span class="d-block text-white">Previous</span>
+            <section id="ourMusic" class="listen-section">
+                <div class="listen-inner">
+                    <div class="listen-intro">
+                        <p class="listen-kicker">Music</p>
+                        <h1>Listen</h1>
+                        <p class="listen-lede">Our latest tracks, live favorites, and more. Turn it up.</p>
+                    </div>
+                    <div id="music-player" class="listen-player">
+                        <div class="listen-now">
+                            <img src="./assets/img/logo/albumCover.webp" class="listen-cover" width="320" height="320" alt="Longtooth album cover">
+                            <div class="listen-now-meta">
+                                <div id="trackTitle">Half Step From Heaven</div>
+                                <p class="listen-artist">Longtooth</p>
+                                <div id="waveform1" class="listen-ws-host" aria-hidden="true"></div>
+                                <input type="range" id="trackProgress" class="listen-progress" min="0" max="1000" value="0" step="1" aria-label="Seek">
+                                <div class="listen-times">
+                                    <span id="trackTime">0:00</span>
+                                    <span id="trackDuration">0:00</span>
+                                </div>
+                                <div class="listen-controls">
+                                    <button type="button" id="prevTrack" aria-label="Previous track">
+                                        <i class="bi bi-skip-start-fill"></i>
+                                    </button>
+                                    <button type="button" id="playPause1" aria-label="Play">
+                                        <i class="bi bi-play-fill"></i>
+                                    </button>
+                                    <span class="visually-hidden">Play</span>
+                                    <button type="button" id="nextTrack" aria-label="Next track">
+                                        <i class="bi bi-skip-end-fill"></i>
+                                    </button>
+                                </div>
                             </div>
-                       <div class="text-center mx-2">
-                        <button id="playPause1" alt="play button"><i class="bi bi-play-fill"></i></button>
-                        <span class="d-block text-white">Play</span>
-
-                       </div>
-                        <div class="text-center mx-2">
-                            <button id="nextTrack" alt="next track button"><i class="bi bi-skip-forward-fill"></i></button>
-                            <span class="d-block text-white">Next</span>
                         </div>
-                        
-                        </div>
-                    </div>      
-            </div>     
-                <!--/Music Player-->
+                        <ol class="listen-tracklist" id="listenTrackList"></ol>
+                    </div>
+                </div>
+            </section>
             <!--About Section-->
             <section class="container py-3" id="aboutSection"> 
                 <h1>Meet the Band</h1>
@@ -282,7 +287,7 @@
             <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
             <script src="./js/gigs-display.js"></script>
             <script src="./js/script.js"></script>
-            <script type="module" src="./js/wavesurfer.esm.js"></script>
+            <script type="module" src="./js/wavesurfer.esm.js?v=listen-3"></script>
 
           
             
