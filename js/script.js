@@ -80,6 +80,44 @@ if (document.readyState === "loading") {
     warmCarouselImages();
 }
 
+function initWatchVideo() {
+    const media = document.querySelector(".watch-media");
+    const video = document.getElementById("watchVideo");
+    const playButton = document.querySelector(".watch-play");
+    if (!media || !video || !playButton) {
+        return;
+    }
+
+    playButton.addEventListener("click", () => {
+        video.controls = true;
+        const playPromise = video.play();
+        if (playPromise && typeof playPromise.then === "function") {
+            playPromise.then(() => {
+                media.classList.add("is-playing");
+            }).catch(() => {});
+        } else {
+            media.classList.add("is-playing");
+        }
+    });
+
+    video.addEventListener("play", () => {
+        media.classList.add("is-playing");
+        video.controls = true;
+    });
+
+    video.addEventListener("ended", () => {
+        media.classList.remove("is-playing");
+        video.controls = false;
+        video.currentTime = 0;
+    });
+}
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initWatchVideo);
+} else {
+    initWatchVideo();
+}
+
 document.querySelectorAll('.toggle-bio').forEach(button => {
     button.addEventListener('click', () => {
         const bioContainer = button.previousElementSibling;

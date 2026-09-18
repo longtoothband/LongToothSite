@@ -247,9 +247,32 @@
                 <p>Photos from the road will live here.</p>
             </section>
 
-            <section id="videos" class="content-stub">
-                <h1>Videos</h1>
-                <p>Live clips and videos will live here.</p>
+            <section id="videos" class="watch-section">
+                <div class="watch-inner">
+                    <div class="watch-intro">
+                        <p class="watch-kicker">Video</p>
+                        <h1>Watch</h1>
+                    </div>
+                    <div class="watch-stage">
+                        <div class="watch-media">
+                            <video
+                                id="watchVideo"
+                                poster="./assets/video/watch-featured.jpg"
+                                preload="none"
+                                playsinline
+                                width="1080"
+                                height="1920"
+                            >
+                                <source src="./assets/video/watch-featured.mp4" type="video/mp4">
+                                Your browser does not support this video.
+                            </video>
+                            <button type="button" class="watch-play" aria-label="Play video">
+                                <span class="watch-play-icon"><i class="bi bi-play-fill"></i></span>
+                            </button>
+                        </div>
+                    </div>
+                    <p class="watch-editorial">See Longtooth in action.</p>
+                </div>
             </section>
             
             <!--Contact Section-->
