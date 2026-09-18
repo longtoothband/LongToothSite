@@ -38,9 +38,10 @@ html {
 }
 
 .site-nav-inner {
+  position: relative;
   max-width: none;
   padding-left: 1.25rem;
-  padding-right: 1.25rem;
+  padding-right: 4.5rem;
   flex-wrap: nowrap;
   align-items: center;
   min-height: 5.75rem;
@@ -56,11 +57,10 @@ html {
 .site-nav-wordmark-img {
   display: block;
   height: 74px;
-  width: auto;
+  width: 185px;
   max-width: none;
+  object-fit: contain;
   flex-shrink: 0;
-  transform: translateZ(0);
-  backface-visibility: hidden;
 }
 
 .site-nav .navbar-nav {
@@ -83,9 +83,6 @@ html {
   padding: 0.45rem 0.4rem !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-rendering: geometricPrecision;
-  transform: translateZ(0);
-  backface-visibility: hidden;
 }
 
 .site-nav .nav-link:hover,
@@ -97,6 +94,11 @@ html {
 }
 
 .site-nav .navbar-toggler {
+  position: absolute;
+  right: 1.25rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
   border: 1px solid rgba(255, 255, 255, 0.35);
   background: transparent;
   box-shadow: none;
@@ -109,6 +111,12 @@ html {
 .site-nav .navbar-toggler:focus-visible {
   outline: none;
   box-shadow: 0 0 0 0.15rem rgba(59, 130, 246, 0.45);
+}
+
+@media (min-width: 992px) {
+  .site-nav-inner {
+    padding-right: 1.25rem;
+  }
 }
 
 @media (max-width: 991.98px) {
