@@ -6,8 +6,10 @@
 }
 
 html,body{
-    height: 100%; /* Ensure the body fills the viewport */
+    height: 100%;
     font-family: Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 h1{
@@ -51,6 +53,8 @@ html {
   width: auto;
   max-width: none;
   flex-shrink: 0;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 .site-nav .navbar-nav {
@@ -64,6 +68,11 @@ html {
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.82) !important;
   padding: 0.55rem 0.7rem !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: geometricPrecision;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 .site-nav .nav-link:hover,
