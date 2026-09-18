@@ -21,6 +21,33 @@ function SendMail(event) {
 
 document.getElementById("contact-form").addEventListener("submit", SendMail);
 
+const navCollapse = document.getElementById("mainNavBar");
+const navToggle = document.querySelector(".site-nav .navbar-toggler");
+
+function hideMobileNav() {
+    if (navCollapse && navCollapse.classList.contains("show") && window.bootstrap) {
+        const instance = bootstrap.Collapse.getInstance(navCollapse);
+        if (instance) {
+            instance.hide();
+        }
+    }
+    if (navToggle) {
+        navToggle.blur();
+    }
+}
+
+document.querySelectorAll(".site-nav .nav-link").forEach((link) => {
+    link.addEventListener("click", hideMobileNav);
+});
+
+if (navCollapse) {
+    navCollapse.addEventListener("hidden.bs.collapse", () => {
+        if (navToggle) {
+            navToggle.blur();
+        }
+    });
+}
+
 function warmCarouselImages() {
     const carousel = document.getElementById("carouselHeader");
     if (!carousel) {
