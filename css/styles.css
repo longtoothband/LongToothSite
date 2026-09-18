@@ -66,6 +66,16 @@ html {
 .site-nav .navbar-toggler {
   border: 1px solid rgba(255, 255, 255, 0.35);
   background: transparent;
+  box-shadow: none;
+}
+
+.site-nav .navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.site-nav .navbar-toggler:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 0.15rem rgba(59, 130, 246, 0.45);
 }
 
 .content-stub {
