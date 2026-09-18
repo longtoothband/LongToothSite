@@ -624,43 +624,129 @@ p{
   margin-top:5%;
 }
 
-#aboutSection {
-  min-height: 350px; /* Reserve sufficient height */
- /* border: 2px solid purple*/
+.about-section {
+  padding: 3.5rem 1.25rem 4rem;
+  background:
+    radial-gradient(ellipse 42% 80% at 0% 0%, rgba(37, 99, 180, 0.12), transparent 55%),
+    linear-gradient(180deg, #0a1018 0%, #07090d 55%, #05070c 100%);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  color: #f3f6fb;
+  text-align: center;
 }
 
-
-   #aboutSection{
-    background-color: rgb(67, 67, 76) !important;
-    text-align: center;
-    margin-top: 20px;
-    color:white;
-  }
-
-.bandMember-profile{
-    border: 10px solid transparent;
-    margin-bottom: 25px;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-    padding: 0;
-  
+.about-inner {
+  max-width: 1180px;
+  margin: 0 auto;
 }
 
-.bio-container{
+.about-intro {
+  max-width: 40rem;
+  margin: 0 auto 2.5rem;
+}
+
+.about-kicker {
+  margin: 0 0 0.4rem;
+  color: #3b82f6;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.about-section h1 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 500;
+  font-size: clamp(2.4rem, 5vw, 3.5rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 0.85rem;
+}
+
+.about-lede {
+  margin: 0 auto;
+  padding-bottom: 0.9rem;
+  border-bottom: 3px solid #3b82f6;
+  color: rgba(226, 232, 240, 0.72);
+  font-size: 0.95rem;
+  line-height: 1.55;
+  width: fit-content;
+  max-width: 100%;
+}
+
+.about-members {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem 1.5rem;
+  align-items: start;
+}
+
+.about-member {
+  min-width: 0;
+  padding: 0 0.25rem;
+}
+
+.about-member-photo {
+  display: block;
+  width: min(100%, 14rem);
+  height: auto;
+  aspect-ratio: 1;
+  margin: 0 auto 1.1rem;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.about-member-name {
+  margin: 0 0 0.2rem;
+  color: #f3f6fb;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.about-member-role {
+  margin: 0 0 0.85rem;
+  color: #3b82f6;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.about-section .preview-bio,
+.about-section .full-bio {
+  color: rgba(226, 232, 240, 0.78);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.about-section .toggle-bio {
+  margin-top: 0.75rem;
+}
+
+.bio-container {
   position: relative;
-
 }
 
-.full-bio{
+.full-bio {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.1s ease-in-out;
   word-wrap: break-word;
-  /*display: none;*/
-  
+}
+
+@media (max-width: 57rem) {
+  .about-members {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2.5rem;
+    max-width: 28rem;
+    margin: 0 auto;
   }
+
+  .about-member-photo {
+    width: min(70vw, 18rem);
+  }
+}
   
 
 .contactSection{
@@ -681,9 +767,17 @@ p{
   font-family: 'Montserrat';
 }
 
-#footerImage{
-max-height: 30%;
-opacity: 75%;
+.footer-placeholder {
+  margin: 0;
+  padding: 3rem 1.25rem;
+  background-color: #05070c;
+  color: rgba(226, 232, 240, 0.55);
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-align: center;
 }
 
   footer {
@@ -707,22 +801,7 @@ opacity: 75%;
       font-size: 2rem;
       
     }
-
-    /* Styling for card images*/
-  .bandMember-profile{
-    max-width: 200px;
-    max-height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-   
-  }
-
-
-  .bandMember-item {
-    margin-bottom: 30px; /* Increase spacing for smaller screens */
 }
-
-  }
 
   @media (max-width: 576px) {
     #hero img {
