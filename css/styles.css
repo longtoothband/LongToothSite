@@ -36,10 +36,26 @@ html {
   max-width: 1280px;
 }
 
-.site-nav-logo {
-  height: 42px;
-  width: auto;
-  display: block;
+.site-nav-brand {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-right: 1.25rem;
+}
+
+.site-nav-wordmark {
+  font-family: "Metal Mania", "Impact", sans-serif;
+  font-size: 1.85rem;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  color: #f3f4f6;
+  text-transform: uppercase;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.65);
+}
+
+.site-nav-brand:hover .site-nav-wordmark,
+.site-nav-brand:focus .site-nav-wordmark {
+  color: #fff;
+  text-decoration: none;
 }
 
 .site-nav .navbar-nav {
@@ -423,8 +439,8 @@ opacity: 75%;
   }
 
   @media (max-width: 576px) {
-    .site-nav-logo {
-        height: 32px;
+    .site-nav-wordmark {
+        font-size: 1.45rem;
     }
 
     #hero img {
