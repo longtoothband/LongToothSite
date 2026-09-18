@@ -123,10 +123,36 @@ html {
   .site-nav,
   .site-nav-inner {
     flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .site-nav .navbar-collapse,
+  .site-nav .navbar-collapse.collapsing,
+  .site-nav .navbar-collapse.show {
+    flex: 1 1 100%;
+    width: 100%;
+    max-width: 100%;
   }
 
   .site-nav .navbar-nav {
-    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 !important;
+    padding: 0.75rem 0 0.35rem;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .site-nav .nav-item {
+    width: 100%;
+  }
+
+  .site-nav .nav-link {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 0.7rem 0 !important;
   }
 }
 
