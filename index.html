@@ -23,31 +23,27 @@
         <link rel="preload" as="image" href="./assets/img/groupPhoto2.webp">
     </head>
     <body>
-         <!--Navigation Menu-->
-         <nav class="navbar navbar-expand-lg fixed-top " style="background-color: black;">
-            <div class="container-fluid" id="navbarContainter">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggler text-light" data-bs-toggle="collapse" data-bs-target="#mainNavBar" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-menu-text" style="color: white;">Menu</span>
-                        <span class="navbar-toggler-icon"></span>
-                        </button>           
+         <nav class="navbar navbar-expand-lg navbar-dark site-nav fixed-top">
+            <div class="container-fluid site-nav-inner">
+                <a class="navbar-brand" href="#hero">
+                    <img src="./assets/img/logo/logo.webp" class="site-nav-logo" alt="Longtooth. The band name is displayed in all caps with a wolf illustration in the center.">
+                </a>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainNavBar" aria-controls="mainNavBar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNavBar">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a href="#hero" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="#aboutSection" class="nav-link">About</a></li>
+                        <li class="nav-item"><a href="#ourMusic" class="nav-link">Music</a></li>
+                        <li class="nav-item"><a href="#gigs" class="nav-link">Shows</a></li>
+                        <li class="nav-item"><a href="#gallery" class="nav-link">Gallery</a></li>
+                        <li class="nav-item"><a href="#videos" class="nav-link">Videos</a></li>
+                        <li class="nav-item"><a href="#contact-form" class="nav-link">Contact</a></li>
+                    </ul>
                 </div>
-                <!--Navigation Links-->
-            <div class="collapse navbar-collapse" id="mainNavBar">
-                <ul class="nav navbar-nav">
-                    <li><a href="#aboutSection" class="nav-link text-white">About</a></li>
-                    <li><a href="#ourMusic" class="nav-link text-white">Listen</a></li>
-                    <li><a href="#contact-form" class="nav-link text-white">Contact</a></li>
-                  </ul>
             </div>
-        </div>
         </nav>
-        <!--End of Navigation Menu-->
-        <header class="d-flex justify-content-between " style="background-color: black;">
-            <div>
-                <img src="/assets/img/logo/logo.webp" class="logoHeader img-fluid opacity-75" alt="Longtooths band is displayed in all caps in the color neon green. An illustration of a wold if placed in the center">
-            </div>
-        </header>
         <main>
             <!--Hero/Welcome Section-->
             <section id="hero" class="d-flex justify-content-center align-items-center"> 
@@ -239,6 +235,16 @@
                     <!--/Row-->
             </div>
             <!--/bandMemberContainer-->
+            </section>
+
+            <section id="gallery" class="content-stub">
+                <h1>Gallery</h1>
+                <p>Photos from the road will live here.</p>
+            </section>
+
+            <section id="videos" class="content-stub">
+                <h1>Videos</h1>
+                <p>Live clips and videos will live here.</p>
             </section>
             
             <!--Contact Section-->

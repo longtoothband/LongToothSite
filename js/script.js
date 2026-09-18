@@ -21,6 +21,18 @@ function SendMail(event) {
 
 document.getElementById("contact-form").addEventListener("submit", SendMail);
 
+const navCollapse = document.getElementById("mainNavBar");
+document.querySelectorAll(".site-nav .nav-link").forEach((link) => {
+    link.addEventListener("click", () => {
+        if (navCollapse && navCollapse.classList.contains("show") && window.bootstrap) {
+            const instance = bootstrap.Collapse.getInstance(navCollapse);
+            if (instance) {
+                instance.hide();
+            }
+        }
+    });
+});
+
 function warmCarouselImages() {
     const carousel = document.getElementById("carouselHeader");
     if (!carousel) {
