@@ -22,7 +22,7 @@ p, .btn, .nav-link{
 }
 
 html {
-  scroll-padding-top: 5.75rem;
+  scroll-padding-top: 6.25rem;
 }
 
 .site-nav {
@@ -32,26 +32,12 @@ html {
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   padding-top: 0.4rem;
   padding-bottom: 0.4rem;
-  min-height: 5.75rem;
-  flex-wrap: nowrap;
-  align-items: center;
 }
 
 .site-nav-inner {
   max-width: none;
   padding-left: 1.25rem;
   padding-right: 1.25rem;
-  flex-wrap: wrap;
-  align-items: center;
-  min-height: 5.75rem;
-}
-
-.site-nav-bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  min-height: 5.75rem;
 }
 
 .site-nav-brand {
@@ -64,32 +50,22 @@ html {
 .site-nav-wordmark-img {
   display: block;
   height: 74px;
-  width: 185px;
+  width: auto;
   max-width: none;
-  object-fit: contain;
   flex-shrink: 0;
 }
 
 .site-nav .navbar-nav {
   gap: 0.15rem;
-  flex-wrap: nowrap;
-  align-items: center;
-}
-
-.site-nav .navbar-collapse {
-  flex-grow: 1;
 }
 
 .site-nav .nav-link {
-  font-size: 0.72rem;
+  font-size: 0.78rem;
   font-weight: 600;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  white-space: nowrap;
   color: rgba(255, 255, 255, 0.82) !important;
-  padding: 0.45rem 0.4rem !important;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0.55rem 0.7rem !important;
 }
 
 .site-nav .nav-link:hover,
@@ -101,8 +77,6 @@ html {
 }
 
 .site-nav .navbar-toggler {
-  margin-left: auto;
-  flex-shrink: 0;
   border: 1px solid rgba(255, 255, 255, 0.35);
   background: transparent;
   box-shadow: none;
@@ -117,54 +91,6 @@ html {
   box-shadow: 0 0 0 0.15rem rgba(59, 130, 246, 0.45);
 }
 
-@media (min-width: 992px) {
-  .site-nav-bar {
-    width: auto;
-    min-height: 0;
-  }
-
-  .site-nav-inner {
-    flex-wrap: nowrap;
-  }
-
-  .site-nav .navbar-collapse {
-    display: flex !important;
-    flex-grow: 1;
-    flex-basis: auto;
-  }
-}
-
-@media (max-width: 991.98px) {
-  .site-nav .navbar-collapse,
-  .site-nav .navbar-collapse.collapsing,
-  .site-nav .navbar-collapse.show {
-    flex: 1 1 100%;
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .site-nav .navbar-nav {
-    width: 100%;
-    margin: 0 !important;
-    padding: 0.35rem 0 0.5rem;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: stretch;
-    gap: 0;
-  }
-
-  .site-nav .nav-item {
-    width: 100%;
-  }
-
-  .site-nav .nav-link {
-    display: block;
-    width: 100%;
-    text-align: left;
-    padding: 0.7rem 0 !important;
-  }
-}
-
 .content-stub {
   text-align: center;
   padding: 3rem 1.25rem;
@@ -176,7 +102,7 @@ body {
     flex-direction: column;
     font-family: Arial, sans-serif;
     padding: 0;
-    padding-top: 5.75rem;
+    padding-top: 6.25rem;
   }
 
 a:hover {
