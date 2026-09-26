@@ -5,14 +5,26 @@ if (typeof emailjs !== "undefined") {
 function SendMail(event) {
     event.preventDefault();
 
+    var form = document.getElementById("contact-form");
+    var name = document.getElementById("fullName").value.trim();
+    var email = document.getElementById("email_id").value.trim();
+    var message = document.getElementById("message").value.trim();
+
+    form.classList.add("was-validated");
+    if (!form.checkValidity() || !name || !email || !message) {
+        form.reportValidity();
+        return;
+    }
+
     var params = {
-        from_name: document.getElementById("fullName").value.trim(),
-        email_id: document.getElementById("email_id").value.trim(),
-        message: document.getElementById("message").value.trim()
+        from_name: name,
+        email_id: email,
+        message: message
     };
     emailjs.send("service_k7hohbb", "template_qmrxhsb", params).then(function (res) {
         alert("Success!" + res.status);
-        document.getElementById("contact-form").reset();
+        form.classList.remove("was-validated");
+        form.reset();
     })
     .catch(function (error) {
         alert("Error: " + error.text);
