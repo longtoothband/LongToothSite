@@ -128,42 +128,207 @@ p{
     text-decoration: none;
   }
 
-/*Gigs section*/
-.gig-section{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 400px;
-  text-align: center;
-  position: relative;
-  padding: 20px;
-  position: relative;
+/* Shows section */
+.shows-section {
+  width: 100%;
+  padding: 3.5rem 1.25rem 4rem;
+  background:
+    radial-gradient(ellipse 45% 80% at 100% 10%, rgba(37, 99, 180, 0.14), transparent 55%),
+    linear-gradient(180deg, #0a1018 0%, #07090d 55%, #05070c 100%);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-.gigs-container{
+.shows-inner {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  padding: 20px;
-  color: white;
- 
+  grid-template-columns: minmax(0, 2.1fr) minmax(0, 1fr);
+  gap: 2.5rem clamp(1.5rem, 4vw, 4rem);
+  align-items: start;
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
 }
 
-#gigs-list{
-  color: white;
+.shows-list-col,
+.shows-book {
+  min-width: 0;
 }
 
+.shows-kicker {
+  margin: 0 0 0.4rem;
+  color: #3b82f6;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
 
-.gigs-container .row > div {
-  padding:10px;
-  box-sizing: border-box;
+.shows-section h1 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 500;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin: 0 0 1.75rem;
+  padding-bottom: 0.7rem;
+  border-bottom: 3px solid #3b82f6;
+  width: fit-content;
+  max-width: 100%;
+  color: #f3f6fb;
+  line-height: 1.05;
+}
+
+.shows-list {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.shows-row {
+  display: grid;
+  grid-template-columns: 5.25rem minmax(0, 1fr) max-content;
+  column-gap: 1.35rem;
+  row-gap: 0.35rem;
+  align-items: start;
   height: auto;
+  padding: 1.35rem 0;
+  border: none;
+  background: transparent;
 }
 
-.gigs-contact{
-   margin-top: 5px;
-   
- }
+.shows-row + .shows-row {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.shows-date {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+}
+
+.shows-date-month {
+  display: block;
+  color: #3b82f6;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.shows-date-day {
+  display: block;
+  margin-top: 0.12rem;
+  color: #f3f6fb;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(1.9rem, 2.4vw, 2.45rem);
+  font-weight: 500;
+  line-height: 0.95;
+}
+
+.shows-date-weekday {
+  display: block;
+  margin-top: 0.2rem;
+  color: rgba(226, 232, 240, 0.48);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.shows-venue {
+  margin: 0;
+  min-width: 0;
+  color: #f3f6fb;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(1.15rem, 1.4vw + 0.85rem, 1.55rem);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.shows-time {
+  margin: 0;
+  justify-self: end;
+  color: rgba(226, 232, 240, 0.62);
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  padding-top: 0.55rem;
+}
+
+.shows-empty,
+.shows-error {
+  margin: 0;
+  color: rgba(226, 232, 240, 0.55);
+  font-size: 0.95rem;
+}
+
+.shows-book {
+  height: auto;
+  padding: 0;
+}
+
+.shows-book-heading {
+  margin: 0 0 1.35rem;
+  color: #f3f6fb;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(2.35rem, 1.2rem + 3.2vw, 3.35rem);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.shows-contact-btn {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  padding: 0.7rem 1.35rem;
+  border: 1px solid #3b82f6;
+  color: #93c5fd;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.shows-contact-btn:hover {
+  color: #fff;
+  background: #3b82f6;
+  text-decoration: none;
+  border-bottom: 1px solid #3b82f6;
+}
+
+@media (max-width: 57rem) {
+  .shows-inner {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 40rem) {
+  .shows-row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.45rem;
+    padding: 1.2rem 0;
+  }
+
+  .shows-date-day {
+    font-size: 2rem;
+  }
+
+  .shows-time {
+    justify-self: start;
+    padding-top: 0.1rem;
+    white-space: normal;
+  }
+}
  
 
 .listen-section {
