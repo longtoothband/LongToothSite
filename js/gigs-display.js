@@ -21,6 +21,32 @@ function parseCsv(csv) {
   );
 }
 
+function escapeHtml(value) {
+  return String(value)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
+function formatGigDate(dateStr) {
+  const raw = (dateStr || "").trim();
+  if (!raw || /^t\.?b\.?a\.?$/i.test(raw)) {
+    return { month: "TBA", day: "", weekday: "" };
+  }
+
+  const parsed = new Date(raw);
+  if (Number.isNaN(parsed.getTime())) {
+    return { month: raw, day: "", weekday: "" };
+  }
+
+  return {
+    month: parsed.toLocaleString("en-US", { month: "short" }).toUpperCase(),
+    day: String(parsed.getDate()).padStart(2, "0"),
+    weekday: parsed.toLocaleString("en-US", { weekday: "short" }).toUpperCase(),
+  };
+}
+
 function renderGigList(gigs) {
   const gigsList = document.getElementById("gigs-list");
   if (!gigsList) {
@@ -30,26 +56,40 @@ function renderGigList(gigs) {
   gigsList.innerHTML = "";
 
   if (!gigs || gigs.length === 0) {
-    gigsList.innerHTML = `<p class="text-center text-muted">No upcoming shows.</p>`;
+    gigsList.innerHTML = `<p class="shows-empty">No upcoming shows. Check back soon!</p>`;
     return;
   }
 
   gigs.forEach((gig) => {
-    const gigElement = document.createElement("div");
-    gigElement.classList.add("gig-entry", "mb-3", "p-3", "border", "rounded");
-    gigElement.innerHTML = `
-      <p><strong>Date:</strong> ${gig.Date || ""}</p>
-      <p><strong>Location:</strong> ${gig.Location || ""}</p>
-      <p><strong>Time:</strong> ${gig.Time || ""}</p>
+    const dateParts = formatGigDate(gig.Date);
+    const row = document.createElement("article");
+    row.className = "shows-row";
+    const weekday = dateParts.weekday
+      ? `<span class="shows-date-weekday">${escapeHtml(dateParts.weekday)}</span>`
+      : "";
+    const day = dateParts.day
+      ? `<span class="shows-date-day">${escapeHtml(dateParts.day)}</span>`
+      : "";
+    const timeHtml = (gig.Time || "").trim()
+      ? `<p class="shows-time">${escapeHtml(gig.Time.trim())}</p>`
+      : "";
+    row.innerHTML = `
+      <div class="shows-date">
+        <span class="shows-date-month">${escapeHtml(dateParts.month)}</span>
+        ${day}
+        ${weekday}
+      </div>
+      <p class="shows-venue">${escapeHtml(gig.Location || "T.B.A.")}</p>
+      ${timeHtml}
     `;
-    gigsList.appendChild(gigElement);
+    gigsList.appendChild(row);
   });
 }
 
 function showGigsError() {
   const gigsList = document.getElementById("gigs-list");
   if (gigsList) {
-    gigsList.innerHTML = `<p class="text-center text-danger">Error loading shows. Please check back later.</p>`;
+    gigsList.innerHTML = `<p class="shows-error">Error loading shows. Please check back later.</p>`;
   }
 }
 
@@ -79,11 +119,7 @@ function renderGigs() {
       return res.text();
     })
     .then((csv) => {
-      const gigs = parseCsv(csv);
-      if (gigs.length === 0) {
-        throw new Error("Sheet was empty");
-      }
-      renderGigList(gigs);
+      renderGigList(parseCsv(csv));
     })
     .catch(() => {
       loadGigsFromJson().then(renderGigList).catch(() => {
