@@ -1,0 +1,4 @@
+
+# Netlify configuration - sets environment variables and build settings per deployment context
+[build.environment]
+  NODE_VERSION = "24"
