@@ -1351,9 +1351,28 @@ p{
   color: #f3f6fb;
 }
 
+.gallery-inner .carousel-item {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #05070c;
+}
+
 .gallery-inner .carousel-inner img {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.gallery-inner img.gallery-photo-portrait {
+  object-position: center 28%;
+}
+
+.gallery-inner img.gallery-photo-guitar {
+  object-position: center top;
 }
 
 @media (max-width: 576px) {
